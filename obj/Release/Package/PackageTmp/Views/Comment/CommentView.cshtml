@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TestHandler.Modules.CommentModel>
+<div class="comments">
+    <h2>Comments</h2>
+    <div id="comments">
+        @foreach (var comment in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">@comment.Text</div>
+            </div>
+        }
+    </div>    
+    @using (Ajax.BeginForm("Add", "Comment", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "updateComments" }))
+    {
+        <textarea class="comment-input" name="text" required></textarea>
+        <input class="button" type="submit" value="send" />
+    }
+</div>
+

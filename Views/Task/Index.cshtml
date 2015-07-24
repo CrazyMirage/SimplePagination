@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Created Tasks</h2>
+@{
+    var panels = new[] { "primary", "success", "info", "warning", "danger" };
+}
+<div class="panel panel-@panels[new Random().Next() % panels.Length]">
+    <div class="panel-heading">
+        @Html.ActionLink("Read Json and display data (pagination)", "UsersPage", "Home")
+    </div>
+    <div class="panel-footer">Completion date: 15/07/2015</div>
+</div>
+
+

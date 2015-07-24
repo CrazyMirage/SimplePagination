@@ -1,0 +1,28 @@
+﻿@model TestHandler.Models.UsersPageModel
+
+@{
+    ViewBag.Title = "UsersPage";
+}
+
+<h2>UsersPage</h2>
+
+<div class="ussers-pagger">
+    <div id="users">
+        @if (Model != null)
+        {
+            @Html.Partial("Users", Model.Users);
+        }
+    </div>
+    <div class="text-center">
+        @if (Model != null)
+        {
+            @Html.Partial("_Pagination", Model.PagginationData);
+        }
+    </div>
+</div>
+@Html.Action("CommentView", "Comment")
+
+@section scripts{
+    @Html.Partial("_UserPageTemplate")
+    @Html.Partial("_CommentTemplate")
+}

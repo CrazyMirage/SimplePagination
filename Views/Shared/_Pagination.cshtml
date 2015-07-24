@@ -1,0 +1,31 @@
+﻿@model TestHandler.Models.PaginationModel
+
+<ul id="pagination" class="pagination">
+    @if (Model != null)
+    {
+        if (!Model.IsFirst)
+        {
+            <li>@Ajax.ActionLink("Previous", Model.DefaultDestination.Action, Model.DefaultDestination.Controller, new { page = Model.PreviousPage }, new AjaxOptions() { OnSuccess = "LoadComplete", HttpMethod = "GET" })</li>
+        }
+        if (Model.IsValid && Model.NumberOfDisplayedPages > 0)
+        {
+            foreach (var page in Model.GetShownPages())
+            {
+                if (page == Model.Page)
+                {
+                    <li class="active"><a>@page</a></li>
+                }
+                else
+                {
+                    <li>@Ajax.ActionLink(page.ToString(), Model.DefaultDestination.Action, Model.DefaultDestination.Controller, new { page = page }, new AjaxOptions() { OnSuccess = "LoadComplete", HttpMethod = "GET" })</li>
+                }
+            }
+
+        }
+        if (!Model.IsLast)
+        {
+            <li>@Ajax.ActionLink("Next", Model.DefaultDestination.Action, Model.DefaultDestination.Controller, new { page = Model.NextPage }, new AjaxOptions() { OnSuccess = "LoadComplete", HttpMethod = "GET" })</li>
+        }
+    }
+
+</ul>

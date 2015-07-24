@@ -1,0 +1,450 @@
+﻿body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+a {
+    color: #777B7F;
+}
+
+    a:hover {
+        color: #232323;
+    }
+
+    a.logo {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+img.logo {
+    max-height: 50px;
+}
+
+.panel-primary > .panel-heading > a {
+    color: #ffffff;
+}
+
+.panel-info > .panel-heading > a {
+    color: #31708f;
+}
+
+.panel-warning > .panel-heading > a {
+    color: #8a6d3b;
+}
+
+.panel-danger > .panel-heading > a {
+    color: #a94442;
+}
+
+.panel-success > .panel-heading > a {
+    color: #3c763d;
+}
+
+.wraper > h2 {
+    margin-top: 0px;
+}
+
+.container {
+    width: 80%;
+    min-width: 900px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav {
+    list-style: none;
+}
+
+    .nav > li {
+        position: relative;
+        display: block;
+    }
+
+        .nav > li > a {
+            position: relative;
+            display: block;
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+        }
+
+            .nav > li > a:hover {
+                text-decoration: none;
+                background-color: #eee;
+            }
+
+.navbar-nav > li > a {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    line-height: 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #232323;
+        background-color: transparent;
+    }
+
+.navbar-nav > li {
+    float: left;
+}
+
+.navbar-right {
+    float: right !important;
+}
+
+.navbar {
+    right: 0;
+    left: 0;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.navbar-header {
+    float: left;
+}
+
+ul.nav-stacked {
+    border-radius: 2px;
+    border: 1px solid #ddd;
+}
+
+.nav-stacked > li {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.left-menu {
+    width: 20%;
+    margin-right: 2%;
+    float: left;
+}
+
+.wraper {
+    width: 78%;
+    float: left;
+}
+
+.panel {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid transparent;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.panel-danger > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.panel-danger {
+    border-color: #ebccd1;
+}
+
+    .panel-danger > .panel-heading {
+        color: #a94442;
+        background-color: #f2dede;
+    }
+
+.panel-info {
+    border-color: #bce8f1;
+}
+
+    .panel-info > .panel-heading {
+        color: #31708f;
+        background-color: #d9edf7;
+    }
+
+.panel-primary {
+    border-color: #337ab7;
+}
+
+    .panel-primary > .panel-heading {
+        color: #fff;
+        background-color: #337ab7;
+    }
+
+.panel-success {
+    border-color: #d6e9c6;
+}
+
+    .panel-success > .panel-heading {
+        color: #3c763d;
+        background-color: #dff0d8;
+    }
+
+.panel-warning {
+    border-color: #faebcc;
+}
+
+    .panel-warning > .panel-heading {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+    }
+
+.text-center {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .pagination > li {
+        display: inline;
+        float: left;
+        margin-left: -1px;
+        margin-right: 0px;
+    }
+
+        .pagination > li > a {
+            padding: 6px 12px;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .pagination > li:first-child > a {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .pagination > li:last-child > a {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .pagination > li > a:hover {
+            background-color: #eee;
+        }
+
+    .pagination > .active > a,
+    .pagination > .active > a:hover {
+        color: #fff;
+        cursor: default;
+        background-color: #337ab7;
+        border-color: #337ab7;
+    }
+
+.comments {
+    margin-bottom: 20px;
+}
+
+div {
+    word-wrap: break-word;
+}
+
+.comment-input {
+    width: 100%;
+    height: 100px;
+}
+
+.footer {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button,
+input[type="submit"] {
+    margin: 10px 10px 5px 0;
+    float: left;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: #232323;
+    background-color: #fff;
+}
+
+    .button:hover,
+    input[type="submit"]:hover {
+        border: 1px solid #ddd;
+        background-color: #eee;
+    }
+
+input[type="password"],
+input[type="text"] {
+    margin: 5px 5px 10px 0;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #232323;
+    background-color: #fff;
+}
+
+#login_modal {
+    position: absolute;
+    margin: 20px;
+    display: none;
+    z-index: 1000;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+    #login_modal > label,
+    #login_modal > input[type="text"],
+    #login_modal > input[type="password"] {
+        display: block;
+    }
+    #login_modal > div > input[type="submit"]
+    {
+        margin-top: 0;
+        float:none
+    }
+    #login_modal > a.regist{
+        margin-top: 2px;
+        padding-top:2px;
+    }
+
+.boxclose {
+    float: right;
+    margin-top: -30px;
+    margin-right: -30px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #ddd;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+}
+
+    .boxclose:before {
+        content: "×";
+    }
+
+.user {
+    padding: 15px 0;
+}
+
+    .user > a {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin-right:15px;
+        line-height: 20px;
+    }
+

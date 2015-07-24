@@ -1,0 +1,33 @@
+﻿<script id='user-data-template'
+        type='text/x-jquery-tmpl'>
+    <div class="panel panel-default">
+        <div class="panel-body">${Name}</div>
+        <div class="panel-footer">${ID}</div>
+    </div>
+</script>
+
+<script id='pagginnation-template'
+        type='text/x-jquery-tmpl'>
+    {{if previous}}
+    <li><a data-ajax="true" data-ajax-method="GET" data-ajax-success="LoadComplete" href="@Url.Action("UsersPage", "Home")?page=${current-1}">Previous</a></li>
+    {{/if}}
+    {{each pagination}}
+    {{if $value == current}}
+    <li class="active"><a>${$value}</a></li>
+    {{else}}
+    <li><a data-ajax="true" data-ajax-method="GET" data-ajax-success="LoadComplete" href="@Url.Action("UsersPage", "Home")?page=${$value}">${$value}</a></li>
+    {{/if}}
+    {{/each}}
+    {{if next}}
+    <li><a data-ajax="true" data-ajax-method="GET" data-ajax-success="LoadComplete" href="@Url.Action("UsersPage", "Home")?page=${current+1}">Next</a></li>
+    {{/if}}
+</script>
+
+<script>
+        function LoadComplete(data) {
+            if (data != null) {
+                $('#users').html($('#user-data-template').tmpl(data.pageData));
+                $('#pagination').html($('#pagginnation-template').tmpl(data));
+            }
+        }
+</script>

@@ -1,0 +1,13 @@
+﻿<script id='comments-template'
+        type='text/x-jquery-tmpl'>
+    <div class="panel panel-default">
+        <div class="panel-body">${Text}</div>
+    </div>
+</script>
+<script>
+        function updateComments(data) {
+            if (data != null) {
+                $('#comments-template').tmpl(data).appendTo('#comments');
+            }
+        }
+</script>

@@ -1,0 +1,56 @@
+﻿<div class="container" id="navbar">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand logo" href="@Url.Action("Index", "Home")">
+                <img class="logo" src="@Url.Content("~/Content/c-large.png")" />
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="@Url.Action("Index", "Task")">Tasks</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li id="user_field">
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    <div>
+                        <a>@HttpContext.Current.User.Identity.Name</a>
+                        @Html.ActionLink("Log Out", "LogOut", "Account")
+                    </div>
+                }
+                else
+                {
+                    <a href="@Url.Action("Login", "Account")" id="start">Login</a>
+                }
+            </li>
+
+        </ul>
+    </nav>
+    @using (Ajax.BeginForm("Login", "Account", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "after_login", OnFailure = "login_error" }))
+    {
+        <div id="login_modal">
+            <a href="#" class="boxclose" id="close"></a>
+            <label for="login">Login</label>
+            <input id="login" type="text" name="username" />
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" />
+            <div>
+                <input type="submit" value="Login" />
+                <a href="@Url.Action("Register", "Account")" class="regist">Registration</a>
+            </div>
+        </div>
+    }
+    @*@using (Ajax.BeginForm("Login", "Account", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "after_login" }))
+        {
+            <div id="register_modal">
+                <a href="#" class="boxclose" id="close"></a>
+                <label for="login">Login</label>
+                <input id="login" type="text" name="username" />
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" />
+                <input type="submit" value="Login" />
+            </div>
+        }*@
+</div>

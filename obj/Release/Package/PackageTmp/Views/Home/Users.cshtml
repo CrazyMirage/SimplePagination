@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TestHandler.Models.UserModel>
+
+@foreach (var user in Model)
+{
+    <div class="panel panel-default">
+        <div class="panel-body">@user.Name</div>
+        <div class="panel-footer">@user.ID</div>
+    </div>
+}
